@@ -1,56 +1,6 @@
 <html>
 
 <head>
- <style>
-        .bg-primary-2 {
-            background-color: #3779B3;
-        }
-
-        .bg-secondary-2 {
-            background: #cbdbe8;
-        }
-
-        .text-underline {
-            text-decoration: underline;
-        }
-
-        .text-bold {
-            font-weight: 700;
-        }
-
-        .text-italic {
-            font-style: italic;
-        }
-
-        .text-small {
-            font-size: 0.8em;
-        }
-
-        .flex-grow-1 {
-            flex-grow: 1;
-        }
-
-        #btn-top {
-            position: fixed;
-            z-index: 999;
-            bottom: 1em;
-            top: auto;
-            left: auto;
-            right: 1em;
-            margin-left: -1.9rem;
-            opacity: .66;
-            display: none;
-        }
-
-        .instagram_feed {
-            overflow: hidden;
-        }
-
-        #jsonHere {
-            max-height: 60vh;
-            overflow: auto;
-        }
-    </style>
     <!--     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159411627-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -103,22 +53,29 @@
 
             </center>
         </nav>
-        <div class="animated fadeIn row" style="width:100vw;animation-duration: 1.5s;">
-            <div class="col-md-6" id="left-hero">
-                <h1 class="hero-tag"><span class="typer" id="main" data-words="Noraebang,Noraebang" data-delay="100"
-                        data-deleteDelay="1000" data-loop="1" style="color:blue!important;"></span>
-                    &nbsp;</h1>
-                <p class="hero-des">An 18+ Asian Social Community <b> Discord </b> Server. A chill place that welcomes all Asians and non-asians.
-                  A non-toxic hangout. Organized games, events, movies, and giveaways. 
-                  Meet other Asians and talk about kpop, anime, and other Asian interests.
-                    <b>Join us!</b>                </p>
-                <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
-                <a href="https://discord.com"><button class="animated bounce delay-1s learn-btn">
-                    What's Discord?
-                    </button></a>
-                <a href="https://discord.gg/xnjJMPD"><button class="contact-btn">
-                        Join Server
-                    </button></a>
+                            <div id="instagram-feed1" class="instagram_feed"></div>
+   
+    <script src="dist/InstagramFeed.min.js"></script>
+    <script>
+        (function() {
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed1"),
+                'display_profile': true,
+                'display_biography': true,
+                'display_gallery': true,
+                'display_captions': true,
+                'max_tries': 8,
+                'callback': null,
+                'styling': true,
+                'items': 100,
+                'items_per_row': 4,
+                'margin': 1,
+                'lazy_load': true,
+                'on_error': console.error
+            });
+        })();
+    </script>
                 <div class="social-icons">
                     <a target="_blank" href="https://facebook.com/noraebangdiscord"><i class="fab fa-facebook-square"></i></a>
                     <a target="_blank" href="https://instagram.com/nrbdiscord"><i class="fab fa-instagram"></i></a>
@@ -127,11 +84,6 @@
                     <a target="_blank" href="https://discord.gg/noraebang"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
-
-            <div class="col-md-6" id="hero-right">
-                <img id="hero-img" src="assets/img/nrb.svg">
-            </div>
-
         </div>
     </div>
     <div class="menu-wrap">
@@ -155,24 +107,6 @@
     <div class="legal">
         <a href="legal.html">legal</a>
 <iframe src="https://discord.com/widget?id=215378181606080512&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
- <script src="dist/InstagramFeed.min.js"></script>
-<script>
-    (function(){
-        new InstagramFeed({
-            'username': 'github',
-            'container': document.getElementById("instagram-feed2"),
-            'display_profile': false,
-            'display_biography': false,
-            'display_gallery': true,
-            'display_captions': false,
-            'callback': null,
-            'styling': true,
-            'items': 8,
-            'items_per_row': 4,
-            'margin': 1 
-        });
-    })();
-</script>
     </div>
 </body>
 
