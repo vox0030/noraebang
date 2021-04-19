@@ -49,6 +49,14 @@
 
             </center>
         </nav>
+        <div class="container pt-3">
+            <div class="tab-content" id="tabContentExamples">
+
+                <div class="tab-pane fade show active" id="example1" role="tabpanel" aria-labelledby="example1-tab">
+                    <h3>Example 1: Default feed styling</h3>
+                    <p>Don't like it? Check other examples!</p>
+                    <div id="instagram-feed1" class="instagram_feed"></div>
+                    <div class="section_code py-3">
                         <div>Code:</div>
                         <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -75,27 +83,334 @@
                     </div>
                 </div>
 
-<script src="dist/InstagramFeed.min.js"></script>
-<script>
+                <div class="tab-pane fade" id="example2" role="tabpanel" aria-labelledby="example2-tab">
+                    <h3>Example 2: Only want images?</h3>
+                    <p>Disable <i>display_profile</i> and <i>display_biography</i></p>
+                    <div id="instagram-feed2" class="instagram_feed"></div>
+                    <div class="section_code py-3">
+                        <div>Code:</div>
+                        <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
     (function(){
         new InstagramFeed({
-            'username': 'nrbdiscord',
+            'username': 'github',
+            'container': document.getElementById("instagram-feed2"),
+            'display_profile': false,
+            'display_biography': false,
+            'display_gallery': true,
+            'display_captions': false,
+            'callback': null,
+            'styling': true,
+            'items': 8,
+            'items_per_row': 4,
+            'margin': 1 
+        });
+    })();
+&lt;/script&gt;
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="example3" role="tabpanel" aria-labelledby="example3-tab">
+                    <h3>Example 3: Want to load more or change the display?</h3>
+                    <p>Change <i>items</i>, <i>items_per_row</i> and <i>margin</i></p>
+                    <div id="instagram-feed3" class="instagram_feed"></div>
+                    <div class="section_code py-3">
+                        <div>Code:</div>
+                        <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    (function(){
+        new InstagramFeed({
+            'username': 'zara',
+            'container': document.getElementById("instagram-feed3"),
+            'display_profile': false,
+            'display_biography': false,
+            'display_gallery': true,
+            'display_captions': false,
+            'callback': null,
+            'styling': true,
+            'items': 12,
+            'items_per_row': 6,
+            'margin': 0.25
+        });
+    })();
+&lt;/script&gt;
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="example4" role="tabpanel" aria-labelledby="example4-tab">
+                    <h3>Example 4: Want to fetch a TAG?</h3>
+                    <p>Use <i>tag</i> instead of <i>username</i>.</p>
+                    <div id="instagram-feed4" class="instagram_feed"></div>
+                    <div class="section_code py-3">
+                        <div>Code:</div>
+                        <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
+&lt;script &gt;
+    (function(){
+        new InstagramFeed({
+            'tag': 'paradise',
+            'container': document.getElementById("instagram-feed4"),
+            'display_profile': true,
+            'display_gallery': true,
+            'display_captions': true,
+            'items': 100,
+            'items_per_row': 5,
+            'margin': 0.5
+        });
+    })();
+&lt;/script&gt;
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="example5" role="tabpanel" aria-labelledby="example5-tab">
+                    <h3>Example 5: Want to display IGTV?</h3>
+                    <p>Enable <i>display_igtv</i>. <a href="https://help.instagram.com/381435875695118" target="_blank" rel="noopener">What is IGTV?</a></p>
+                    <div id="instagram-feed5" class="instagram_feed"></div>
+                    <div class="section_code py-3">
+                        <div>Code:</div>
+                        <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    (function(){
+        new InstagramFeed({
+            'username': 'fcbarcelona',
+            'container': document.getElementById("instagram-feed5"),
+            'display_profile': false,
+            'display_biography': false,
+            'display_gallery': false,
+            'display_captions': false,
+            'display_igtv': true,
+            'callback': null,
+            'styling': true,
+            'items': 8,
+            'items_per_row': 4,
+            'margin': 1 
+        });
+    })();
+&lt;/script&gt;
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="example6" role="tabpanel" aria-labelledby="example6-tab">
+                    <h3>Example 6: Don't like our styles at all?</h3>
+                    <p>Make your owns disabling <i>styling</i></p>
+                    <div class="instagram_feed info">
+                        <p>This is the html you will have (Note we have enabled profile and biography in this case).</p>
+                        <pre><code class="language-html">&lt;div class=&quot;<strong>instagram_profile</strong>&quot;&gt;
+    &lt;img class=&quot;<strong>instagram_profile_image</strong>&quot; src=&quot;...&quot; alt=&quot;Instagram profile pic&quot;&gt;
+    &lt;p class=&quot;<strong>instagram_username</strong>&quot;&gt;@Instagram (&lt;a href=&quot;...&quot;&gt;@instagram&lt;/a&gt;)&lt;/p&gt;
+    &lt;p class=&quot;<strong>instagram_biography</strong>&quot;&gt;....&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;<strong>instagram_gallery</strong>&quot;&gt;
+    &lt;a href=&quot;https://www.instagram.com/p/Bh-P3IoDxyB&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;...&quot; alt=&quot;instagram instagram image 0&quot; /&gt;
+    &lt;/a&gt;
+    ...
+&lt;/div&gt;
+&lt;div class=&quot;<strong>instagram_igtv</strong>&quot;&gt;
+    &lt;a href=&quot;https://www.instagram.com/p/Bh-P3IoDxyB&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;...&quot; alt=&quot;instagram instagram image 0&quot; /&gt;
+    &lt;/a&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                    <div class="section_code py-3">
+                        <div>Code:</div>
+                        <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    (function(){
+        new InstagramFeed({
+            'username': 'instagram',
+            'container': document.getElementById("instagram-feed3"),
+            'display_profile': true,
+            'display_biography': true,
+            'display_gallery': true,
+            'display_captions': false,
+            'display_igtv': true,
+            'callback': null,
+            'styling': false,
+            'items': 12,
+        });
+    })();
+&lt;/script&gt;
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="example7" role="tabpanel" aria-labelledby="example7-tab">
+                    <h3>Example 7: Don't either like our template?</h3>
+                    <p>Define a <i>callback</i> to get all the data fetched</p>
+                    <div class="instagram_feed info">
+                        <p>This is the format you will get.</p>
+                        <pre id="jsonHere"><code class="language-json">
+</code></pre>
+                    </div>
+                    <div class="section_code py-3">
+                        <div>Code:</div>
+                        <pre><code class="language-html">&lt;script type="text/javascript" src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    (function(){
+        new InstagramFeed({
+            'username': 'instagram',
+            'callback': function(data){
+                document.getElementById("jsonHere").innerHTML = JSON.stringify(data, null, 2);
+            }
+        });
+    })();
+&lt;/script&gt;
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="example8" role="tabpanel" aria-labelledby="example8-tab">
+                    <h3>Example 8: AMD (Asynchronous module definition)</h3>
+                    <div class="section_code py-3">
+                        <div>Code:</div>
+                        <pre><code class="language-html">
+&lt;script&gt;
+    // Example for RequireJS
+    require.config({
+        paths:{
+            'InstagramFeed': '../dist/InstagramFeed.min',
+        }
+    });
+
+    require(["InstagramFeed"], function(InstagramFeed){
+        new InstagramFeed({
+            'username': 'instagram',
             'container': document.getElementById("instagram-feed1"),
             'display_profile': true,
             'display_biography': true,
             'display_gallery': true,
             'display_captions': true,
-            'max_tries': 8,
+            'get_raw_json': false,
             'callback': null,
             'styling': true,
             'items': 8,
             'items_per_row': 4,
-            'margin': 1,
-            'lazy_load': true,
-            'on_error': console.error
+            'margin': 1
         });
-    })();
-</script>
+    });
+&lt;/script&gt;
+</code></pre>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer" class="bg-dark">
+        <div class="container text-center py-4">
+            <h3 class="text-white">Still not enough?</h3>
+
+            <a class="h3 mb-3 text-primary text-underline" target="_blank" rel="noopener" href="https://github.com/jsanahuja/InstagramFeed">
+                Open an issue or send a pull request!
+            </a>
+
+        </div>
+        <a href="#header" id="btn-top" class="bg-primary px-2 py-1" title="Go top">
+            <span class="text-white" aria-hidden="true">^</span>
+        </a>
+    </footer>
+
+    <script src="dist/InstagramFeed.min.js"></script>
+    <script>
+        (function() {
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed1"),
+                'display_profile': true,
+                'display_biography': true,
+                'display_gallery': true,
+                'display_captions': true,
+                'max_tries': 8,
+                'callback': null,
+                'styling': true,
+                'items': 100,
+                'items_per_row': 4,
+                'margin': 1,
+                'lazy_load': true,
+                'on_error': console.error
+            });
+
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed2"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'display_captions': false,
+                'callback': null,
+                'styling': true,
+                'items': 8,
+                'items_per_row': 4,
+                'margin': 1
+            });
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed3"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'display_captions': false,
+                'callback': null,
+                'styling': true,
+                'items': 12,
+                'items_per_row': 6,
+                'margin': 0.25
+            });
+            new InstagramFeed({
+                'tag': 'petsofnrb',
+                'container': document.getElementById("instagram-feed4"),
+                'display_profile': true,
+                'display_gallery': true,
+                'display_captions': true,
+                'items': 100,
+                'items_per_row': 5,
+                'margin': 0.5
+            });
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed5"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': false,
+                'display_captions': false,
+                'display_igtv': true,
+                'callback': null,
+                'styling': true,
+                'items': 8,
+                'items_per_row': 4,
+                'margin': 1
+            });
+
+            new InstagramFeed({
+                'username': 'instagram',
+                'callback': function(data) {
+                    document.getElementById("jsonHere").innerHTML = JSON.stringify(data, null, 2);
+                }
+            });
+        })();
+        (function($) {
+            // Show back to top button if distance from top > 0
+            $(window).scroll(function() {
+                var viewportTop = $(window).scrollTop() + $(window).height();
+
+                if ($(window).scrollTop() > 10) {
+                    $('#btn-top').addClass('d-block');
+                    $('#btn-top').removeClass('d-none');
+                } else {
+                    $('#btn-top').addClass('d-none');
+                    $('#btn-top').removeClass('d-block');
+                }
+            });
+        })(jQuery);
+    </script>
 
             </div>
                              </div>
