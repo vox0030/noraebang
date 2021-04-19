@@ -64,8 +64,28 @@
                 </div>
             </div>
 
-            <div class="col-md-6" id="hero-right">
-                <img id="hero-img" src="assets/img/nrb.svg">
+                              <div id="instagram-feed1" class="instagram_feed">
+    <script src="dist/InstagramFeed.min.js"></script>
+    <script>
+        (function() {
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed1"),
+                'display_profile': true,
+                'display_biography': true,
+                'display_gallery': true,
+                'display_captions': true,
+                'max_tries': 8,
+                'callback': null,
+                'styling': true,
+                'items': 12,
+                'items_per_row': 5,
+                'margin': 1,
+                'lazy_load': true,
+                'on_error': console.error
+            });
+        })();
+    </script>
             </div>
 
     </div>
@@ -92,26 +112,4 @@
 <iframe src="https://discord.com/widget?id=215378181606080512&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
 </body>
-                              <div id="instagram-feed1" class="instagram_feed">
-    <script src="dist/InstagramFeed.min.js"></script>
-    <script>
-        (function() {
-            new InstagramFeed({
-                'username': 'nrbdiscord',
-                'container': document.getElementById("instagram-feed1"),
-                'display_profile': true,
-                'display_biography': true,
-                'display_gallery': true,
-                'display_captions': true,
-                'max_tries': 8,
-                'callback': null,
-                'styling': true,
-                'items': 12,
-                'items_per_row': 5,
-                'margin': 1,
-                'lazy_load': true,
-                'on_error': console.error
-            });
-        })();
-    </script>
 </html>
