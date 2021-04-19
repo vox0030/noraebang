@@ -53,27 +53,32 @@
         </nav>
 
                               <div id="instagram-feed1" class="instagram_feed">
-    <script src="dist/InstagramFeed.min.js"></script>
-    <script>
-        (function() {
-            new InstagramFeed({
-                'username': 'nrbdiscord',
-                'container': document.getElementById("instagram-feed1"),
-                'display_profile': true,
-                'display_biography': true,
-                'display_gallery': true,
-                'display_captions': true,
-                'max_tries': 8,
-                'callback': null,
-                'styling': true,
-                'items': 12,
-                'items_per_row': 5,
-                'margin': 1,
-                'lazy_load': true,
-                'on_error': console.error
-            });
-        })();
-    </script>
+
+<script>
+    // Example for RequireJS
+    require.config({
+        paths:{
+            'InstagramFeed': '../dist/InstagramFeed.min',
+        }
+    });
+
+    require(["InstagramFeed"], function(InstagramFeed){
+        new InstagramFeed({
+            'username': 'instagram',
+            'container': document.getElementById("instagram-feed1"),
+            'display_profile': true,
+            'display_biography': true,
+            'display_gallery': true,
+            'display_captions': true,
+            'get_raw_json': false,
+            'callback': null,
+            'styling': true,
+            'items': 8,
+            'items_per_row': 4,
+            'margin': 1
+        });
+    });
+</script>
             </div>
                              </div>
                 <div class="social-icons">
