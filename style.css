@@ -251,6 +251,13 @@ li span a:hover {
     text-decoration: none;
 }
 
+.legalbottomright {
+    position: fixed;
+    right: 0px; bottom: 0px;
+    color: #444;
+    text-decoration: none;
+}
+
 .privacy-policy h1 {
     font-size: 2.5em;
     /* font-family: 'CircularStd'; */
