@@ -1,68 +1,6 @@
-<html>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-    <!--     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159411627-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-159411627-1');
-    </script> -->
-    <!-- Caching Disabler-->
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="-1">
-        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
-    
-    
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <meta name="Description"
-        content="Ishan Sharma ishandeveloper Ishan Inc. Chandigarh, India www.ishandeveloper.com .NET | ML | AI | Python | UI/UX | App Developer | Flutter | Web Developer" />
-    <title>Noraebang: Asian Discord Server </title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="apple-touch-icon" href="assets/img/favicon.png">
-    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
-    <meta name="theme-color" content="#FFE1C4">
-    <script src="assets/js/app.js"></script>
-    <link rel="manifest" href="manifest.json">
-</head>
-
-<body id="index-body" style="overflow: visible;">
-    <div>
-        <nav class="nav-desk">
-            <center>
-                <div class="nav-items">
-                    <ul>
-                        <li><span><a href="index.html">Home</a></span></li>
-                        <li><span><a href="https://instagram.com/nrbdiscord">Images</a></span></li>
-                        <li><span><a href="https://my-store-11745922.html">Shop</a></span></li>
-                        <li><span><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BSPKATUTKH66J&source=url">Donate</a></span></li>
-                    </ul>
-                </div>
-
-            </center>
-        </nav>
-            <div class="col-md-6" id="left-hero">
-                <div class="social-icons">
-                    <a target="_blank" href="https://facebook.com/noraebangdiscord"><i class="fab fa-facebook-square"></i></a>
-                    <a target="_blank" href="https://instagram.com/nrbdiscord"><i class="fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://twitter.com/nrbdiscord"><i
-                            class="fab fa-twitter"></i></a>
-                    <a target="_blank" href="https://discord.gg/noraebang"><i class="fab fa-discord"></i></a>
-                </div>
-            </div>
-
-            <div class="col-md-6" id="hero-right">
-                                              <div id="instagram-feed1" class="instagram_feed">
     <script src="dist/InstagramFeed.min.js"></script>
     <script>
         (function() {
@@ -76,40 +14,86 @@
                 'max_tries': 8,
                 'callback': null,
                 'styling': true,
-                'items': 12,
-                'items_per_row': 5,
+                'items': 100,
+                'items_per_row': 4,
                 'margin': 1,
                 'lazy_load': true,
                 'on_error': console.error
             });
-        })();
-    </script>
-            </div>
 
-        </div>
-    </div>
-    <div class="menu-wrap">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger">
-            <div></div>
-        </div>
-        <div class="menu">
-            <div>
-                <div>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Uses</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="legal">
-        <a href="legal.html">legal</a>
-<iframe src="https://discord.com/widget?id=215378181606080512&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed2"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'display_captions': false,
+                'callback': null,
+                'styling': true,
+                'items': 8,
+                'items_per_row': 4,
+                'margin': 1
+            });
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed3"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'display_captions': false,
+                'callback': null,
+                'styling': true,
+                'items': 12,
+                'items_per_row': 6,
+                'margin': 0.25
+            });
+            new InstagramFeed({
+                'tag': 'petsofnrb',
+                'container': document.getElementById("instagram-feed4"),
+                'display_profile': true,
+                'display_gallery': true,
+                'display_captions': true,
+                'items': 100,
+                'items_per_row': 5,
+                'margin': 0.5
+            });
+            new InstagramFeed({
+                'username': 'nrbdiscord',
+                'container': document.getElementById("instagram-feed5"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': false,
+                'display_captions': false,
+                'display_igtv': true,
+                'callback': null,
+                'styling': true,
+                'items': 8,
+                'items_per_row': 4,
+                'margin': 1
+            });
+
+            new InstagramFeed({
+                'username': 'instagram',
+                'callback': function(data) {
+                    document.getElementById("jsonHere").innerHTML = JSON.stringify(data, null, 2);
+                }
+            });
+        })();
+        (function($) {
+            // Show back to top button if distance from top > 0
+            $(window).scroll(function() {
+                var viewportTop = $(window).scrollTop() + $(window).height();
+
+                if ($(window).scrollTop() > 10) {
+                    $('#btn-top').addClass('d-block');
+                    $('#btn-top').removeClass('d-none');
+                } else {
+                    $('#btn-top').addClass('d-none');
+                    $('#btn-top').removeClass('d-block');
+                }
+            });
+        })(jQuery);
+    </script>
 </body>
 
 </html>
