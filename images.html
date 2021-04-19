@@ -11,26 +11,6 @@
                     <div class="section_code py-3">
                         <div>Code:</div>
                         <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    (function(){
-        new InstagramFeed({
-            'username': 'Instagram',
-            'container': document.getElementById("instagram-feed1"),
-            'display_profile': true,
-            'display_biography': true,
-            'display_gallery': true,
-            'display_captions': true,
-            'max_tries': 8,
-            'callback': null,
-            'styling': true,
-            'items': 8,
-            'items_per_row': 4,
-            'margin': 1,
-            'lazy_load': true,
-            'on_error': console.error
-        });
-    })();
-&lt;/script&gt;
 </code></pre>
                     </div>
                 </div>
@@ -42,76 +22,6 @@
                     <div class="section_code py-3">
                         <div>Code:</div>
                         <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    (function(){
-        new InstagramFeed({
-            'username': 'github',
-            'container': document.getElementById("instagram-feed2"),
-            'display_profile': false,
-            'display_biography': false,
-            'display_gallery': true,
-            'display_captions': false,
-            'callback': null,
-            'styling': true,
-            'items': 8,
-            'items_per_row': 4,
-            'margin': 1 
-        });
-    })();
-&lt;/script&gt;
-</code></pre>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="example3" role="tabpanel" aria-labelledby="example3-tab">
-                    <h3>Example 3: Want to load more or change the display?</h3>
-                    <p>Change <i>items</i>, <i>items_per_row</i> and <i>margin</i></p>
-                    <div id="instagram-feed3" class="instagram_feed"></div>
-                    <div class="section_code py-3">
-                        <div>Code:</div>
-                        <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    (function(){
-        new InstagramFeed({
-            'username': 'zara',
-            'container': document.getElementById("instagram-feed3"),
-            'display_profile': false,
-            'display_biography': false,
-            'display_gallery': true,
-            'display_captions': false,
-            'callback': null,
-            'styling': true,
-            'items': 12,
-            'items_per_row': 6,
-            'margin': 0.25
-        });
-    })();
-&lt;/script&gt;
-</code></pre>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="example4" role="tabpanel" aria-labelledby="example4-tab">
-                    <h3>Example 4: Want to fetch a TAG?</h3>
-                    <p>Use <i>tag</i> instead of <i>username</i>.</p>
-                    <div id="instagram-feed4" class="instagram_feed"></div>
-                    <div class="section_code py-3">
-                        <div>Code:</div>
-                        <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
-&lt;script &gt;
-    (function(){
-        new InstagramFeed({
-            'tag': 'paradise',
-            'container': document.getElementById("instagram-feed4"),
-            'display_profile': true,
-            'display_gallery': true,
-            'display_captions': true,
-            'items': 100,
-            'items_per_row': 5,
-            'margin': 0.5
-        });
-    })();
-&lt;/script&gt;
 </code></pre>
                     </div>
                 </div>
@@ -123,24 +33,6 @@
                     <div class="section_code py-3">
                         <div>Code:</div>
                         <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    (function(){
-        new InstagramFeed({
-            'username': 'fcbarcelona',
-            'container': document.getElementById("instagram-feed5"),
-            'display_profile': false,
-            'display_biography': false,
-            'display_gallery': false,
-            'display_captions': false,
-            'display_igtv': true,
-            'callback': null,
-            'styling': true,
-            'items': 8,
-            'items_per_row': 4,
-            'margin': 1 
-        });
-    })();
-&lt;/script&gt;
 </code></pre>
                     </div>
                 </div>
@@ -172,22 +64,6 @@
                     <div class="section_code py-3">
                         <div>Code:</div>
                         <pre><code class="language-html">&lt;script src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    (function(){
-        new InstagramFeed({
-            'username': 'instagram',
-            'container': document.getElementById("instagram-feed3"),
-            'display_profile': true,
-            'display_biography': true,
-            'display_gallery': true,
-            'display_captions': false,
-            'display_igtv': true,
-            'callback': null,
-            'styling': false,
-            'items': 12,
-        });
-    })();
-&lt;/script&gt;
 </code></pre>
                     </div>
                 </div>
@@ -203,16 +79,6 @@
                     <div class="section_code py-3">
                         <div>Code:</div>
                         <pre><code class="language-html">&lt;script type="text/javascript" src="dist/InstagramFeed.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-    (function(){
-        new InstagramFeed({
-            'username': 'instagram',
-            'callback': function(data){
-                document.getElementById("jsonHere").innerHTML = JSON.stringify(data, null, 2);
-            }
-        });
-    })();
-&lt;/script&gt;
 </code></pre>
                     </div>
                 </div>
@@ -222,31 +88,6 @@
                     <div class="section_code py-3">
                         <div>Code:</div>
                         <pre><code class="language-html">
-&lt;script&gt;
-    // Example for RequireJS
-    require.config({
-        paths:{
-            'InstagramFeed': '../dist/InstagramFeed.min',
-        }
-    });
-
-    require(["InstagramFeed"], function(InstagramFeed){
-        new InstagramFeed({
-            'username': 'instagram',
-            'container': document.getElementById("instagram-feed1"),
-            'display_profile': true,
-            'display_biography': true,
-            'display_gallery': true,
-            'display_captions': true,
-            'get_raw_json': false,
-            'callback': null,
-            'styling': true,
-            'items': 8,
-            'items_per_row': 4,
-            'margin': 1
-        });
-    });
-&lt;/script&gt;
 </code></pre>
                     </div>
                 </div>
