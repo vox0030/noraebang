@@ -251,13 +251,6 @@ li span a:hover {
     text-decoration: none;
 }
 
-.legalimages a,
-.legalimages a:hover,
-.legalimages a:active {
-    color: #444;
-    text-decoration: none;
-}
-
 .legalimages
     position: fixed;
     right: 0px; bottom: 0px;
