@@ -460,9 +460,10 @@ li span a:hover {
 }
 
 .legalimages {
-    position: absolute;
-    bottom: 200px;
-    right: 25px;
+    position: fixed;
+    right: 0px; bottom: 0px;
+    width: 200px;
+    height:40px;
 }
 
 .hero-tag {
