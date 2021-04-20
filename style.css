@@ -605,7 +605,9 @@ li {
 }
 
 .social-icons {
-    margin-top: 30%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-full {
