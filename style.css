@@ -461,8 +461,8 @@ li span a:hover {
 
 .legalimages {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 200px;
+    right: 25px;
 }
 
 .hero-tag {
