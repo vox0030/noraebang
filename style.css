@@ -251,11 +251,11 @@ li span a:hover {
     text-decoration: none;
 }
 
-.legalimages a
-.legalimages a:hover,
-.legalimages a:active {
-    color: #444;
-    text-decoration: none;
+.legalimages
+    position: fixed;
+    right: 0px; bottom: 0px;
+    width: 200px;
+    height:40px;
 }
 
 .privacy-policy h1 {
@@ -457,13 +457,6 @@ li span a:hover {
     position: absolute;
     bottom: 25px;
     right: 25px;
-}
-
-.legalimages {
-    position: fixed;
-    right: 0px; bottom: 0px;
-    width: 200px;
-    height:40px;
 }
 
 .hero-tag {
